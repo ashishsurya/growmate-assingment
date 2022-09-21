@@ -8,30 +8,33 @@ import Research from './components/Tabs/Research';
 import { NavigationContainer } from '@react-navigation/native';
 import Reactions from './components/Tabs/Reactions';
 import Related from './components/Tabs/Related';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 const Tab = createMaterialTopTabNavigator();
 
 export default function App() {
   return (
-    <SafeAreaProvider>
-      <View style={tw.style(['flex', 'flex-1', 'bg-[#FCFCFC]'])}>
-        <Banner />
-        <TradingBlock />
-        <StatusBar style='auto' />
-        <NavigationContainer>
-          <Tab.Navigator
-            screenOptions={{
-              tabBarLabelStyle: { fontSize: 12, textTransform: 'none' },
-              tabBarActiveTintColor: '#E431C1',
-              tabBarStyle: { borderColor: '#E431C1' },
-            }}
-          >
-            <Tab.Screen name='Research & News' component={Research} />
-            <Tab.Screen name='Reactions' component={Reactions} />
-            <Tab.Screen name='Related' component={Related} />
-          </Tab.Navigator>
-        </NavigationContainer>
-      </View>
-    </SafeAreaProvider>
+    <GestureHandlerRootView style={{flex:1}}>
+      <SafeAreaProvider>
+        <View style={tw.style(['flex', 'flex-1', 'bg-[#FCFCFC]'])}>
+          <Banner />
+          <TradingBlock />
+          <StatusBar style='auto' />
+          <NavigationContainer>
+            <Tab.Navigator
+              screenOptions={{
+                tabBarLabelStyle: { fontSize: 12, textTransform: 'none' },
+                tabBarActiveTintColor: '#E431C1',
+                tabBarStyle: { borderColor: '#E431C1' },
+              }}
+            >
+              <Tab.Screen name='Research & News' component={Research} />
+              <Tab.Screen name='Reactions' component={Reactions} />
+              <Tab.Screen name='Related' component={Related} />
+            </Tab.Navigator>
+          </NavigationContainer>
+        </View>
+      </SafeAreaProvider>
+    </GestureHandlerRootView>
   );
 }

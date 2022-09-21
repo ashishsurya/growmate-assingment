@@ -5,7 +5,7 @@ import tw from 'twrnc';
 
 export default function RelatedNewsCard({ cardImageUrl, title }) {
   return (
-    <View style={tw`flex flex-row border my-2 h-25 rounded-xl items-center`}>
+    <View style={tw`flex flex-row border border-gray-300 my-2 h-25 rounded-xl items-center`}>
       <Image
         style={tw`h-25 w-25 rounded-l-xl`}
         source={{
