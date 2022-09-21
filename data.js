@@ -15,6 +15,6 @@ export const resTiles = [
     id: 3,
     title: `BBC`,
     content:
-      'Most people the BBC spoke to do not believe China is about to attack Taiwan . " They\'re a bunch of gangsters , " said one man fishing on the ...',
+      'Most people the BBC spoke to do not believe China is about to attack Taiwan . " They\'re a bunch of gangsters , " said one man fishing on the ...' ,
   },
 ];
