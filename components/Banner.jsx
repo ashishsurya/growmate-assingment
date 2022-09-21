@@ -7,7 +7,7 @@ import tw from 'twrnc';
 
 export default function Banner() {
   return (
-    <View style={tw`h-1/2 w-full`}>
+    <View style={tw`h-2/5 w-full`}>
       <ImageBackground
         style={tw`w-full h-full `}
         resizeMode='cover'

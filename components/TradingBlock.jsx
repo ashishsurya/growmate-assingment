@@ -16,7 +16,7 @@ export default function TradingBlock() {
         '#8F2BCE',
         '#B22EC8',
       ]}
-      style={tw`h-fit w-full px-4 py-3 flex flex-row items-center justify-around`}
+      style={tw`h-fit w-full px-4 py-3 flex flex-row items-center justify-around rounded-b-3xl`}
     >
       <View>
         <Text style={tw`text-white`}>CHANCE</Text>
@@ -37,11 +37,11 @@ export default function TradingBlock() {
 
 const OptionChip = ({ title, color, btnText }) => {
   return (
-    <View style={tw``}>
+    <View style={tw`flex justify-center`}>
       <Text h4 style={tw`text-white`}>
         {title}
       </Text>
-      <Button color={color} style={tw`p-0`}>
+      <Button color={color}>
         {btnText}
       </Button>
     </View>
