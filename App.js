@@ -1,19 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { Image, SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { View, StatusBar } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import tw from 'twrnc';
+import Banner from './components/Banner';
+import TradingBlock from './components/TradingBlock';
 
 export default function App() {
   return (
-      <View style={tw`flex flex-1 `}>
-        <View style={tw`h-1/2 w-full relative`}>
-          <Image
-            style={tw`w-full h-full`}
-            source={{
-              uri: 'https://www.telegraph.co.uk/content/dam/news/2021/04/24/230421_ADB_FORIEGN-lead_trans_NvBQzQNjv4BqqVzuuqpFlyLIwiB6NTmJwfSVWeZ_vEN7c6bHu2jJnT8.jpg',
-            }}
-        />
-        
-        </View>
+    <SafeAreaProvider>
+      <View style={tw.style(['flex', 'flex-1'])}>
+        <Banner />
+        <TradingBlock/>
+        <StatusBar style='auto' />
       </View>
+    </SafeAreaProvider>
   );
 }
