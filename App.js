@@ -14,7 +14,7 @@ const Tab = createMaterialTopTabNavigator();
 export default function App() {
   return (
     <SafeAreaProvider>
-      <View style={tw.style(['flex', 'flex-1'])}>
+      <View style={tw.style(['flex', 'flex-1', 'bg-[#FCFCFC]'])}>
         <Banner />
         <TradingBlock />
         <StatusBar style='auto' />
@@ -25,7 +25,6 @@ export default function App() {
               tabBarActiveTintColor: '#E431C1',
               tabBarStyle: { borderColor: '#E431C1' },
             }}
-            
           >
             <Tab.Screen name='Research & News' component={Research} />
             <Tab.Screen name='Reactions' component={Reactions} />
