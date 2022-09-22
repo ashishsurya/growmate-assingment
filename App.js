@@ -9,7 +9,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import Reactions from './components/Tabs/Reactions';
 import Related from './components/Tabs/Related';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import BottomSheet, { BottomSheetView } from '@gorhom/bottom-sheet';
+import BottomSheet, {
+  BottomSheetScrollView,
+  BottomSheetView,
+} from '@gorhom/bottom-sheet';
 import { useCallback, useMemo, useRef } from 'react';
 import BottomSheetComments from './components/BottomSheetComments';
 
@@ -56,9 +59,9 @@ export default function App() {
               enablePanDownToClose
               onChange={handleSheetChange}
             >
-              <BottomSheetView>
+              <BottomSheetScrollView>
                 <BottomSheetComments />
-              </BottomSheetView>
+              </BottomSheetScrollView>
             </BottomSheet>
           </NavigationContainer>
         </View>

@@ -24,14 +24,30 @@ export default function BottomSheetComments() {
           <Text style={{ color: 'blue' }}>Community Guidelines</Text>
         </Text>
       </View>
-      <View>
+      <View style={styles.commentsContainer}>
         <FullComment
           image='https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60'
           content={
             "If China does indeed attack Taiwan soon , October is the likely time since the Taiwan Strait waters will be calm , facilitating amphibious operations . The drills around Taiwan allowed China to build up forces in Fujian , which is part of what's needed before an invasion ."
           }
-          name="Prof.Alison"
+          name='Prof.Alison'
+          time='1 Sep'
         />
+        <FullComment
+          image='https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60'
+          content={
+            "If China does indeed attack Taiwan soon , October is the likely time since the Taiwan Strait waters will be calm , facilitating amphibious operations . The drills around Taiwan allowed China to build up forces in Fujian , which is part of what's needed before an invasion ."
+          }
+          name='Prof.Alison'
+          time='1 Sep'
+        /><FullComment
+        image='https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60'
+        content={
+          "If China does indeed attack Taiwan soon , October is the likely time since the Taiwan Strait waters will be calm , facilitating amphibious operations . The drills around Taiwan allowed China to build up forces in Fujian , which is part of what's needed before an invasion ."
+        }
+        name='Prof.Alison'
+        time='1 Sep'
+      />
       </View>
     </View>
   );
@@ -76,5 +92,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     marginTop: 5,
     paddingVertical: 10,
+  },
+  commentsContainer: {
+    marginTop: 20,
+    paddingHorizontal: 20,
   },
 });
