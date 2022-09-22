@@ -6,20 +6,9 @@ import { Feather } from '@expo/vector-icons';
 import tw from 'twrnc';
 import { Entypo } from '@expo/vector-icons';
 import PreviewReactions from '../PreviewReactions';
-import BottomSheet, { BottomSheetView } from '@gorhom/bottom-sheet';
 
-export default function Reactions() {
-  const bottomSheetRef = useRef(null);
-
-  const snappoints = useMemo(() => ['100%'], []);
-
-  const handleSheetChange = useCallback((index) => {
-    console.log('handleSheetChange', index);
-  }, []);
-
-  const handleSnapPress = useCallback((index) => {
-    bottomSheetRef.current?.snapToIndex(index);
-  }, []);
+export default function Reactions({handleSnapPress}) {
+  
 
   return (
     <View style={tw`p-4`}>
@@ -60,17 +49,7 @@ export default function Reactions() {
           </View>
         </View>
       </TouchableOpacity>
-      <BottomSheet
-        index={0}
-        ref={bottomSheetRef}
-        snapPoints={snappoints}
-        enablePanDownToClose
-        onChange={handleSheetChange}
-      >
-        <BottomSheetView>
-          <Text>Hello</Text>
-        </BottomSheetView>
-      </BottomSheet>
+      
     </View>
   );
 }
